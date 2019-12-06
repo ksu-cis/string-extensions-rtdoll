@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using StringExtensions;
 
 namespace StringExtensions
 {
@@ -9,8 +10,8 @@ namespace StringExtensions
         {
             List<string> writings = new List<string>()
             {
-                "Foo",
-                "Bar",
+                "foo",
+                "bar",
                 "A River Runs through It",
                 "The Five-Year Itch",
                 "The Bridges of Madison County",
@@ -24,7 +25,9 @@ namespace StringExtensions
 
             foreach(string s in writings)
             {
-                Console.WriteLine(s);
+                Console.WriteLine(s.Capitalize());
+                Console.WriteLine(s.Titlize());
+                Console.WriteLine($"Word Count {s.WordCount()}");
                 Console.WriteLine("---------------------------");
             }
             
